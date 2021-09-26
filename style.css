@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    /* --------------- Text --------------- */
+    /* Primary */
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    /* Neutral */
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    /* -------- Background Gradient ---------*/
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    /* -------------- Dividers ------------- */
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+* {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(var(--Soft-violet), var(--Soft-blue));
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+main {
+    background-color: White;
+    width: 90%;
+    height: 50%;
+    border-radius: 20px;
+    padding: 0 1rem 0 1rem;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: 
+        "hero"
+        "questions"
+    ;
+}
+
+.hero {
+    grid-area: hero;
+}
+
+.questions {
+    grid-area: questions;
+}
+
+.questions h1 {
+    text-align: center;
+}
+
+.question {
+    border-bottom: 1px solid gray;
+    padding: 1rem 0 1rem 0;
+}
+
+.btn {
+    background: none;
+    width: 100%;
+    text-align: start;
+}
+
+.btn::after {
+    content: url("images/icon-arrow-down.svg");
+    float: right;
+}
+
+.isOpen {
+    font-weight: 700;
+}
+
+.isOpen::after {
+    transform: rotate(180deg);
+}
+
+.content {
+    height: 0;
+    overflow: hidden;
+}
+
