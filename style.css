@@ -34,22 +34,37 @@ body {
 }
 
 main {
-    background-color: White;
-    width: 90%;
-    height: 50%;
+    background-color: White;    
+    width: 338px;
+    height: 510px;
     border-radius: 20px;
-    padding: 0 1rem 0 1rem;
+    padding: 0 1.5rem 0 1.5rem;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 20% 80%;
+    grid-template-rows: 25% 75%;
     grid-template-areas: 
         "hero"
         "questions"
-    ;
+    ;    
 }
 
 .hero {
-    grid-area: hero;
+    grid-area: hero;     
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.hero-woman {
+    position: relative;
+    top: -85%;
+    left: 0;
+}
+
+.hero-background {
+    position: absolute;
+    top: -5%;
+    left: 9%;
 }
 
 .questions {
@@ -58,10 +73,13 @@ main {
 
 .questions h1 {
     text-align: center;
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .question {
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid var(--Light-grayish-blue);
     padding: 1rem 0 1rem 0;
 }
 
@@ -69,6 +87,7 @@ main {
     background: none;
     width: 100%;
     text-align: start;
+    color: var(--Very-dark-grayish-blue);
 }
 
 .btn::after {
@@ -78,6 +97,7 @@ main {
 
 .isOpen {
     font-weight: 700;
+    color: var(--Very-dark-desaturated-blue);
 }
 
 .isOpen::after {
@@ -86,6 +106,12 @@ main {
 
 .content {
     height: 0;
-    overflow: hidden;
+    overflow: hidden;    
+}
+
+.content p {
+    margin-top: 1rem;
+    padding-right: 2rem;
+    color: var(--Dark-grayish-blue);
 }
 
