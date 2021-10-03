@@ -55,16 +55,28 @@ main {
     left: 0;
 }
 
-.hero-woman {
+.hero-woman-mobile {
     position: relative;
     top: -85%;
     left: 0;
 }
 
-.hero-background {
+.hero-woman-desktop {
+    display: none;
+}
+
+.hero-background-mobile {
     position: absolute;
     top: -5%;
     left: 9%;
+}
+
+.hero-background-desktop {
+    display: none;
+}
+
+.box-desktop {
+    display: none;
 }
 
 .questions {
@@ -115,3 +127,80 @@ main {
     color: var(--Dark-grayish-blue);
 }
 
+@media (min-width: 1200px) {
+    main {        
+        width: 873px;
+        height: 510px;
+        border-radius: 20px;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+        grid-template-areas: 
+            "hero questions"   
+        ;    
+    }
+
+    .hero {
+        grid-area: hero;     
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    
+    .hero-container {
+        height: 100%;
+        overflow: hidden;
+        background-image: url("images/bg-pattern-desktop.svg");
+        background-repeat: no-repeat;
+        background-position: left 120% top 80%;
+        background-size: 170%;
+    }
+
+    .hero-woman-mobile {
+        display: none;
+    }
+    
+    .hero-woman-desktop {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        top: 40px;
+        left: -90px;
+    }
+    
+    .hero-background-mobile {
+        display: none;
+    }
+    
+    .hero-background-desktop {
+        display: block;
+        position: absolute;
+        width: 800px;
+        top: -200px;
+        left: -420px
+    }
+    
+    .box-desktop {
+        display: block;
+        position: absolute;
+        top: 170px;
+        left: -115px;        
+    }
+
+    .questions {
+        padding: 4rem 5rem 0 0;
+    }
+
+    .questions h1 {
+        text-align: start;
+        color: var(--Very-dark-desaturated-blue);
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .btn:hover {
+        color: var( --Soft-red);
+        cursor: pointer;
+    }
+}
