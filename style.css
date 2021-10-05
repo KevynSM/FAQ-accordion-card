@@ -23,7 +23,7 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -118,7 +118,8 @@ main {
 
 .content {
     height: 0;
-    overflow: hidden;    
+    overflow: hidden;
+    visibility: hidden;
 }
 
 .content p {
@@ -127,7 +128,7 @@ main {
     color: var(--Dark-grayish-blue);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
     main {        
         width: 873px;
         height: 510px;
